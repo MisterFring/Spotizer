@@ -15,6 +15,7 @@
 		D65791712600E75800CA869A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D657916F2600E75800CA869A /* LaunchScreen.storyboard */; };
 		D657917C2600E75800CA869A /* SpotizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D657917B2600E75800CA869A /* SpotizerTests.swift */; };
 		D65791872600E75800CA869A /* SpotizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791862600E75800CA869A /* SpotizerUITests.swift */; };
+		D6579198260105C500CA869A /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6579197260105C500CA869A /* SearchTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D65791822600E75800CA869A /* SpotizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65791862600E75800CA869A /* SpotizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotizerUITests.swift; sourceTree = "<group>"; };
 		D65791882600E75800CA869A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6579197260105C500CA869A /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				D65791662600E75700CA869A /* SceneDelegate.swift */,
 				D65791682600E75700CA869A /* ViewController.swift */,
 				D657916A2600E75700CA869A /* Main.storyboard */,
+				D6579197260105C500CA869A /* SearchTableViewController.swift */,
 				D657916D2600E75800CA869A /* Assets.xcassets */,
 				D657916F2600E75800CA869A /* LaunchScreen.storyboard */,
 				D65791722600E75800CA869A /* Info.plist */,
@@ -261,6 +264,7 @@
 				D65791692600E75700CA869A /* ViewController.swift in Sources */,
 				D65791652600E75600CA869A /* AppDelegate.swift in Sources */,
 				D65791672600E75700CA869A /* SceneDelegate.swift in Sources */,
+				D6579198260105C500CA869A /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

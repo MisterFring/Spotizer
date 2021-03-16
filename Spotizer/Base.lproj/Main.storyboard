@@ -1,24 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ewQ-lm-bkF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Spotizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyU-BU-wi2">
+                                <rect key="frame" x="39" y="30" width="336" height="228"/>
+                                <string key="text">Welcome to 
+Spotizer</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ram_daftPunk" translatesAutoresizingMaskIntoConstraints="NO" id="iIo-DQ-iAD">
+                                <rect key="frame" x="29.5" y="408" width="355" height="353"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discovery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZy-eA-7KV">
+                                <rect key="frame" x="120.5" y="303" width="173" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.7052923168008447" green="1" blue="0.82746426897455261" alpha="0.87046975040015995" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="iIo-DQ-iAD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="37o-4C-p94"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QyU-BU-wi2" secondAttribute="trailing" constant="39" id="93d-aS-lXo"/>
+                            <constraint firstAttribute="bottom" secondItem="QyU-BU-wi2" secondAttribute="bottom" constant="638" id="PXf-Sf-CL1"/>
+                            <constraint firstItem="lZy-eA-7KV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WOX-Ht-8ZS"/>
+                            <constraint firstItem="QyU-BU-wi2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="XRm-ED-YLk"/>
+                            <constraint firstItem="lZy-eA-7KV" firstAttribute="top" secondItem="QyU-BU-wi2" secondAttribute="bottom" constant="45" id="db9-Gu-nLv"/>
+                            <constraint firstItem="QyU-BU-wi2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="djR-uB-8j8"/>
+                            <constraint firstItem="iIo-DQ-iAD" firstAttribute="top" secondItem="QyU-BU-wi2" secondAttribute="bottom" constant="150" id="ueh-Ho-RyJ"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="edK-Jx-3nW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="F1z-9P-7OP">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ewQ-lm-bkF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8al-Ic-9VM">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="piz-aI-P8P"/>
+                        <segue destination="EqU-6v-sUY" kind="relationship" relationship="viewControllers" id="Or0-IP-Tih"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VHm-We-WSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="oKP-3k-79E">
+            <objects>
+                <tableViewController id="EqU-6v-sUY" customClass="SearchTableViewController" customModule="Spotizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="uhl-iA-8ZL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.70529231680000004" green="1" blue="0.82746426900000003" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="separatorColor" red="0.70529231680000004" green="1" blue="0.82746426900000003" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" red="0.70529231680000004" green="1" blue="0.82746426900000003" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="85X-AT-lVX">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="NKR-fw-uOd" rowHeight="100" style="IBUITableViewCellStyleDefault" id="36t-zr-XtT">
+                                <rect key="frame" x="0.0" y="99.5" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="36t-zr-XtT" id="F4K-DG-Xhk">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NKR-fw-uOd">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EqU-6v-sUY" id="N0V-Rz-U0U"/>
+                            <outlet property="delegate" destination="EqU-6v-sUY" id="vB3-f6-RjU"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="211-I9-74q"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9F-Uh-JV6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="847.76785714285711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="ram_daftPunk" width="355" height="353"/>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
