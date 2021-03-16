@@ -13,28 +13,32 @@ class SearchTableViewController: UITableViewController {
         [
             "title":"Dakiti",
             "artist":"Bad Bunny",
-            "artworkName":"dakiti"
+            "artworkName":"dakiti",
+            "audioFileName":"dakiti"
         ],
         [
             "title":"Lose yourself",
             "artist":"Eminem",
-            "artworkName":"loseYourself"
+            "artworkName":"loseYourself",
+            "audioFileName":"loseYourself"
         ],
         [
             "title":"Something about us",
             "artist":"Daft Punk",
-            "artworkName":"somethingAboutUs"
+            "artworkName":"somethingAboutUs",
+            "audioFileName":"somethingAboutUs"
         ],
         [
             "title":"Da",
             "artist":"PNL",
-            "artworkName":"da"
+            "artworkName":"da",
+            "audioFileName":"da"
         ]
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -55,9 +59,15 @@ class SearchTableViewController: UITableViewController {
     }
 
     // sera pour le clic, cf  impr écran
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "player") as? PlayerViewController {
+                
+                vc.songs = sounds
+                vc.position = indexPath.row
+            
+                self.present(vc, animated: true, completion: nil)
+            }
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
@@ -65,16 +75,26 @@ class SearchTableViewController: UITableViewController {
         let title = self.sounds[indexPath.row]["title"]
         let artist = self.sounds[indexPath.row]["artist"]
         let artworkName = self.sounds[indexPath.row]["artworkName"]
-        
-        cell.textLabel?.text = title! + " - " + artist!
-        
         let image = UIImage(named: artworkName!)
+        
+        // set the data in the cell
+        //cell.textLabel?.text = title! + " - " + artist!
+        cell.textLabel?.text = title
+        cell.detailTextLabel?.text = artist
         cell.imageView!.image = image
         
-        cell.detailTextLabel?.text = "test"
+        // set style of the cell
+        cell.textLabel?.font = UIFont(name: "Helvetica-Bold", size: 18)
+        cell.detailTextLabel?.font = UIFont(name: "Helvetica", size: 17)
 
         return cell
     }
+    
+    // Set the height of each row
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     
 
     /*

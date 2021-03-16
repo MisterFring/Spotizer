@@ -16,6 +16,12 @@
 		D657917C2600E75800CA869A /* SpotizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D657917B2600E75800CA869A /* SpotizerTests.swift */; };
 		D65791872600E75800CA869A /* SpotizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791862600E75800CA869A /* SpotizerUITests.swift */; };
 		D6579198260105C500CA869A /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6579197260105C500CA869A /* SearchTableViewController.swift */; };
+		D65791A12601424700CA869A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65791A02601424700CA869A /* MediaPlayer.framework */; };
+		D65791A826014B7D00CA869A /* dakiti.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D65791A726014B7D00CA869A /* dakiti.mp3 */; };
+		D65791AF2601504C00CA869A /* somethingAboutUs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D65791AC2601504B00CA869A /* somethingAboutUs.mp3 */; };
+		D65791B02601504C00CA869A /* da.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D65791AD2601504C00CA869A /* da.mp3 */; };
+		D65791B12601504C00CA869A /* loseYourself.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D65791AE2601504C00CA869A /* loseYourself.mp3 */; };
+		D65791B6260158FA00CA869A /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791B5260158FA00CA869A /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		D65791862600E75800CA869A /* SpotizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotizerUITests.swift; sourceTree = "<group>"; };
 		D65791882600E75800CA869A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6579197260105C500CA869A /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		D65791A02601424700CA869A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		D65791A726014B7D00CA869A /* dakiti.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dakiti.mp3; sourceTree = "<group>"; };
+		D65791AC2601504B00CA869A /* somethingAboutUs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = somethingAboutUs.mp3; sourceTree = "<group>"; };
+		D65791AD2601504C00CA869A /* da.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = da.mp3; sourceTree = "<group>"; };
+		D65791AE2601504C00CA869A /* loseYourself.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = loseYourself.mp3; sourceTree = "<group>"; };
+		D65791B5260158FA00CA869A /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65791A12601424700CA869A /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +98,7 @@
 				D657917A2600E75800CA869A /* SpotizerTests */,
 				D65791852600E75800CA869A /* SpotizerUITests */,
 				D65791622600E75600CA869A /* Products */,
+				D657919F2601424700CA869A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +115,13 @@
 		D65791632600E75600CA869A /* Spotizer */ = {
 			isa = PBXGroup;
 			children = (
+				D65791A526014A9B00CA869A /* Resources */,
 				D65791642600E75600CA869A /* AppDelegate.swift */,
 				D65791662600E75700CA869A /* SceneDelegate.swift */,
 				D65791682600E75700CA869A /* ViewController.swift */,
 				D657916A2600E75700CA869A /* Main.storyboard */,
 				D6579197260105C500CA869A /* SearchTableViewController.swift */,
+				D65791B5260158FA00CA869A /* PlayerViewController.swift */,
 				D657916D2600E75800CA869A /* Assets.xcassets */,
 				D657916F2600E75800CA869A /* LaunchScreen.storyboard */,
 				D65791722600E75800CA869A /* Info.plist */,
@@ -129,6 +145,33 @@
 				D65791882600E75800CA869A /* Info.plist */,
 			);
 			path = SpotizerUITests;
+			sourceTree = "<group>";
+		};
+		D657919F2601424700CA869A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D65791A02601424700CA869A /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D65791A526014A9B00CA869A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D65791A626014AC600CA869A /* Audio */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D65791A626014AC600CA869A /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				D65791AD2601504C00CA869A /* da.mp3 */,
+				D65791AE2601504C00CA869A /* loseYourself.mp3 */,
+				D65791AC2601504B00CA869A /* somethingAboutUs.mp3 */,
+				D65791A726014B7D00CA869A /* dakiti.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +277,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65791AF2601504C00CA869A /* somethingAboutUs.mp3 in Resources */,
+				D65791B02601504C00CA869A /* da.mp3 in Resources */,
+				D65791B12601504C00CA869A /* loseYourself.mp3 in Resources */,
 				D65791712600E75800CA869A /* LaunchScreen.storyboard in Resources */,
 				D657916E2600E75800CA869A /* Assets.xcassets in Resources */,
+				D65791A826014B7D00CA869A /* dakiti.mp3 in Resources */,
 				D657916C2600E75700CA869A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +312,7 @@
 				D65791652600E75600CA869A /* AppDelegate.swift in Sources */,
 				D65791672600E75700CA869A /* SceneDelegate.swift in Sources */,
 				D6579198260105C500CA869A /* SearchTableViewController.swift in Sources */,
+				D65791B6260158FA00CA869A /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
