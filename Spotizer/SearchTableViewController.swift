@@ -58,7 +58,7 @@ class SearchTableViewController: UITableViewController {
         return self.sounds.count
     }
 
-    // sera pour le clic, cf  impr écran
+    // When you clic on a song
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "player") as? PlayerViewController {
                 
