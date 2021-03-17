@@ -12,9 +12,8 @@ class PlayerViewController: UIViewController {
     
     public var songs:[[String : String]] = []
     public var position:Int = 0
-    var player:AVAudioPlayer?
-    let playIcon = UIImage(systemName: "play")
-    let pauseIcon = UIImage(systemName: "pause")
+    //var player:AVAudioPlayer?
+   
     
     @IBOutlet weak var holder: UIView!
     @IBOutlet weak var artworkImageView: UIImageView!
@@ -24,20 +23,13 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurePlayer()
+        PlayerManager.shared.playMusic(url:songs[position]["audioFileName"]!)
+        
 
         // Do any additional setup after loading the view.
     }
     @IBAction func playAndStopButton(_ sender: UIButton) {
-        let isPlay = player?.isPlaying
-        
-        //isPlay! ? player?.stop():player?.play()
-        if isPlay! {
-            player?.stop()
-            playButton.setBackgroundImage(playIcon, for: UIControl.State.normal)
-        } else {
-            player?.play()
-            playButton.setBackgroundImage(pauseIcon, for: UIControl.State.normal)
-        }
+        PlayerManager.shared.playStop(button:sender)
     }
     
     // configure le player qu'une fois meme si on le rappelle ??
@@ -55,27 +47,6 @@ class PlayerViewController: UIViewController {
 
         artworkImageView.image = artworkImage
         titleLabel.text = title
-        
-        let url = Bundle.main.path(forResource: song["audioFileName"], ofType: "mp3")
-        
-        do {
-            // pas cherché à comprendre
-            try AVAudioSession.sharedInstance().setMode(.default)
-//            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-            
-            // unwrap (!), vérifie si c'est pas nil ?
-            player = try AVAudioPlayer(contentsOf: URL(string: url!)!)
-            player?.play()
-            playButton.setBackgroundImage(pauseIcon, for: UIControl.State.normal)
-            //playButton.setBackgroundImage(pauseIcon, for: UIControl.State.normal)
-
-            
-            // DEBILE DE METTRE UN PLAYER DANS UNE MODAL?
-            
-        }
-        catch {
-            print("error")
-        }
     }
 
     /*

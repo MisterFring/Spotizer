@@ -146,7 +146,7 @@ Spotizer</string>
                                         <rect key="frame" x="155" y="596" width="80" height="59.333333333333371"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" backgroundImage="playpause" catalog="system">
+                                        <state key="normal" backgroundImage="pause" catalog="system">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -201,7 +201,7 @@ Spotizer</string>
         <image name="da" width="225" height="225"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="playpause" catalog="system" width="128" height="80"/>
+        <image name="pause" catalog="system" width="88" height="128"/>
         <image name="ram_daftPunk" width="355" height="353"/>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

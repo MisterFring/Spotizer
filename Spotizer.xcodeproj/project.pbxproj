@@ -22,6 +22,7 @@
 		D65791B02601504C00CA869A /* da.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D65791AD2601504C00CA869A /* da.mp3 */; };
 		D65791B12601504C00CA869A /* loseYourself.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D65791AE2601504C00CA869A /* loseYourself.mp3 */; };
 		D65791B6260158FA00CA869A /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791B5260158FA00CA869A /* PlayerViewController.swift */; };
+		D65791C9260202C200CA869A /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791C8260202C200CA869A /* PlayerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		D65791AD2601504C00CA869A /* da.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = da.mp3; sourceTree = "<group>"; };
 		D65791AE2601504C00CA869A /* loseYourself.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = loseYourself.mp3; sourceTree = "<group>"; };
 		D65791B5260158FA00CA869A /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		D65791C8260202C200CA869A /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		D65791632600E75600CA869A /* Spotizer */ = {
 			isa = PBXGroup;
 			children = (
+				D65791C72602028600CA869A /* Managers */,
 				D65791A526014A9B00CA869A /* Resources */,
 				D65791642600E75600CA869A /* AppDelegate.swift */,
 				D65791662600E75700CA869A /* SceneDelegate.swift */,
@@ -172,6 +175,14 @@
 				D65791A726014B7D00CA869A /* dakiti.mp3 */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		D65791C72602028600CA869A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D65791C8260202C200CA869A /* PlayerManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 			files = (
 				D65791692600E75700CA869A /* ViewController.swift in Sources */,
 				D65791652600E75600CA869A /* AppDelegate.swift in Sources */,
+				D65791C9260202C200CA869A /* PlayerManager.swift in Sources */,
 				D65791672600E75700CA869A /* SceneDelegate.swift in Sources */,
 				D6579198260105C500CA869A /* SearchTableViewController.swift in Sources */,
 				D65791B6260158FA00CA869A /* PlayerViewController.swift in Sources */,
