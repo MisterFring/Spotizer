@@ -13,33 +13,40 @@ class PlayerViewController: UIViewController {
     public var songs:[[String : String]] = []
     public var position:Int = 0
     var player:AVAudioPlayer?
+    let playIcon = UIImage(systemName: "play")
+    let pauseIcon = UIImage(systemName: "pause")
     
     @IBOutlet weak var holder: UIView!
     @IBOutlet weak var artworkImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var playButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurePlayer()
 
         // Do any additional setup after loading the view.
     }
     @IBAction func playAndStopButton(_ sender: UIButton) {
         let isPlay = player?.isPlaying
+        
         //isPlay! ? player?.stop():player?.play()
         if isPlay! {
             player?.stop()
+            playButton.setBackgroundImage(playIcon, for: UIControl.State.normal)
         } else {
             player?.play()
+            playButton.setBackgroundImage(pauseIcon, for: UIControl.State.normal)
         }
     }
     
     // configure le player qu'une fois meme si on le rappelle ??
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        //if holder.subviews.count == 0 {
-            configurePlayer()
-        //}
-    }
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        //if holder.subviews.count == 0 {
+//            configurePlayer()
+//        //}
+//    }
     
     func configurePlayer() {
         let song = songs[position]
@@ -59,6 +66,9 @@ class PlayerViewController: UIViewController {
             // unwrap (!), vérifie si c'est pas nil ?
             player = try AVAudioPlayer(contentsOf: URL(string: url!)!)
             player?.play()
+            playButton.setBackgroundImage(pauseIcon, for: UIControl.State.normal)
+            //playButton.setBackgroundImage(pauseIcon, for: UIControl.State.normal)
+
             
             // DEBILE DE METTRE UN PLAYER DANS UNE MODAL?
             
