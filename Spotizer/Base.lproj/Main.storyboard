@@ -47,10 +47,14 @@ Spotizer</string>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="edK-Jx-3nW"/>
+                    <connections>
+                        <outlet property="artworkImageView" destination="iIo-DQ-iAD" id="2yc-wj-b9y"/>
+                        <outlet property="titleLabel" destination="lZy-eA-7KV" id="KVG-R6-v1U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
+            <point key="canvasLocation" x="944.61538461538453" y="93.127962085308056"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="F1z-9P-7OP">

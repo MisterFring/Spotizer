@@ -10,8 +10,9 @@ import UIKit
 
 class PlayerViewController: UIViewController {
     
-    public var songs:[[String : String]] = []
+    public var songs:[Song] = []
     public var position:Int = 0
+    public var song:Song?
     //var player:AVAudioPlayer?
    
     
@@ -23,8 +24,7 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurePlayer()
-        PlayerManager.shared.playMusic(url:songs[position]["audioFileName"]!)
-        
+        //PlayerManager.shared.playMusic(url:songs[position]["audioFileName"]!)
 
         // Do any additional setup after loading the view.
     }
@@ -42,11 +42,12 @@ class PlayerViewController: UIViewController {
     
     func configurePlayer() {
         let song = songs[position]
-        let artworkImage = UIImage(named: song["artworkName"]!)
-        let title = song["title"]
+        //let artworkImage = UIImage(named: song.blabablbal!)
+        let title = song.title
 
-        artworkImageView.image = artworkImage
+        //artworkImageView.image = artworkImage
         titleLabel.text = title
+        PlayerManager.shared.playAudioFromURL(urlDeezer: song.url)
     }
 
     /*

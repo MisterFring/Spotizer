@@ -59,15 +59,15 @@ class SearchTableViewController: UITableViewController {
     }
 
     // When you clic on a song
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "player") as? PlayerViewController {
-                
-                vc.songs = sounds
-                vc.position = indexPath.row
-            
-                self.present(vc, animated: true, completion: nil)
-            }
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "player") as? PlayerViewController {
+//                
+//                vc.songs = sounds
+//                vc.position = indexPath.row
+//            
+//                self.present(vc, animated: true, completion: nil)
+//            }
+//    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
