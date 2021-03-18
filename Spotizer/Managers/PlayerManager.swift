@@ -46,6 +46,7 @@ final class PlayerManager {
     
     func playStop(button:UIButton){
         let isPlay = player?.isPlaying
+        
         if isPlay! {
             player?.pause()
             button.setBackgroundImage(UIImage(systemName: "play"), for: UIControl.State.normal)

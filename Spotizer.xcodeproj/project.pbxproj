@@ -24,6 +24,8 @@
 		D65791B6260158FA00CA869A /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791B5260158FA00CA869A /* PlayerViewController.swift */; };
 		D65791C9260202C200CA869A /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791C8260202C200CA869A /* PlayerManager.swift */; };
 		D65791D126021EB500CA869A /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791D026021EB500CA869A /* ApiManager.swift */; };
+		D65791E22603A00600CA869A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791E12603A00600CA869A /* Utils.swift */; };
+		D65791E82603AF7500CA869A /* AlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791E72603AF7500CA869A /* AlbumTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		D65791B5260158FA00CA869A /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		D65791C8260202C200CA869A /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		D65791D026021EB500CA869A /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		D65791E12603A00600CA869A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D65791E72603AF7500CA869A /* AlbumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,17 +123,16 @@
 		D65791632600E75600CA869A /* Spotizer */ = {
 			isa = PBXGroup;
 			children = (
+				D65791E62603AF2200CA869A /* Controllers */,
 				D65791C72602028600CA869A /* Managers */,
 				D65791A526014A9B00CA869A /* Resources */,
 				D65791642600E75600CA869A /* AppDelegate.swift */,
 				D65791662600E75700CA869A /* SceneDelegate.swift */,
-				D65791682600E75700CA869A /* ViewController.swift */,
 				D657916A2600E75700CA869A /* Main.storyboard */,
-				D6579197260105C500CA869A /* SearchTableViewController.swift */,
-				D65791B5260158FA00CA869A /* PlayerViewController.swift */,
 				D657916D2600E75800CA869A /* Assets.xcassets */,
 				D657916F2600E75800CA869A /* LaunchScreen.storyboard */,
 				D65791722600E75800CA869A /* Info.plist */,
+				D65791E12603A00600CA869A /* Utils.swift */,
 			);
 			path = Spotizer;
 			sourceTree = "<group>";
@@ -186,6 +189,17 @@
 				D65791D026021EB500CA869A /* ApiManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		D65791E62603AF2200CA869A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D65791682600E75700CA869A /* ViewController.swift */,
+				D6579197260105C500CA869A /* SearchTableViewController.swift */,
+				D65791B5260158FA00CA869A /* PlayerViewController.swift */,
+				D65791E72603AF7500CA869A /* AlbumTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +343,8 @@
 				D65791672600E75700CA869A /* SceneDelegate.swift in Sources */,
 				D6579198260105C500CA869A /* SearchTableViewController.swift in Sources */,
 				D65791B6260158FA00CA869A /* PlayerViewController.swift in Sources */,
+				D65791E82603AF7500CA869A /* AlbumTableViewController.swift in Sources */,
+				D65791E22603A00600CA869A /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

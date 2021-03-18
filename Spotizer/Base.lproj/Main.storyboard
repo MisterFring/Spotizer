@@ -23,8 +23,8 @@ Spotizer</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ram_daftPunk" translatesAutoresizingMaskIntoConstraints="NO" id="iIo-DQ-iAD">
-                                <rect key="frame" x="17.666666666666657" y="356" width="355" height="353"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="somethingAboutUs" translatesAutoresizingMaskIntoConstraints="NO" id="iIo-DQ-iAD">
+                                <rect key="frame" x="82.666666666666686" y="356" width="225" height="225"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discovery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZy-eA-7KV">
                                 <rect key="frame" x="108.66666666666669" y="251" width="173" height="49"/>
@@ -32,23 +32,40 @@ Spotizer</string>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObO-y4-fa4">
+                                <rect key="frame" x="154" y="631" width="83" height="82"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" backgroundImage="globe" catalog="system">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                    <color key="titleShadowColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="otherTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3QY-jB-Btd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.7052923168008447" green="1" blue="0.82746426897455261" alpha="0.87046975040015995" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="ObO-y4-fa4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="0fQ-U0-pXC"/>
                             <constraint firstItem="iIo-DQ-iAD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="37o-4C-p94"/>
+                            <constraint firstItem="ObO-y4-fa4" firstAttribute="top" secondItem="iIo-DQ-iAD" secondAttribute="bottom" constant="49" id="5FF-CT-bj2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QyU-BU-wi2" secondAttribute="trailing" constant="39" id="93d-aS-lXo"/>
                             <constraint firstAttribute="bottom" secondItem="QyU-BU-wi2" secondAttribute="bottom" constant="638" id="PXf-Sf-CL1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ObO-y4-fa4" secondAttribute="trailing" constant="153" id="SHv-Hl-Jgb"/>
                             <constraint firstItem="lZy-eA-7KV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WOX-Ht-8ZS"/>
                             <constraint firstItem="QyU-BU-wi2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="XRm-ED-YLk"/>
                             <constraint firstItem="lZy-eA-7KV" firstAttribute="top" secondItem="QyU-BU-wi2" secondAttribute="bottom" constant="45" id="db9-Gu-nLv"/>
                             <constraint firstItem="QyU-BU-wi2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="djR-uB-8j8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ObO-y4-fa4" secondAttribute="bottom" constant="47.666666666666629" id="qgO-68-9ON"/>
                             <constraint firstItem="iIo-DQ-iAD" firstAttribute="top" secondItem="QyU-BU-wi2" secondAttribute="bottom" constant="150" id="ueh-Ho-RyJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="edK-Jx-3nW"/>
                     <connections>
                         <outlet property="artworkImageView" destination="iIo-DQ-iAD" id="2yc-wj-b9y"/>
+                        <outlet property="otherButton" destination="ObO-y4-fa4" id="SQl-Sz-yNZ"/>
                         <outlet property="titleLabel" destination="lZy-eA-7KV" id="KVG-R6-v1U"/>
                     </connections>
                 </viewController>
@@ -62,6 +79,7 @@ Spotizer</string>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ewQ-lm-bkF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8al-Ic-9VM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -84,13 +102,13 @@ Spotizer</string>
                         <color key="backgroundColor" red="0.70529231680000004" green="1" blue="0.82746426900000003" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="separatorColor" red="0.70529231680000004" green="1" blue="0.82746426900000003" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="sectionIndexBackgroundColor" red="0.70529231680000004" green="1" blue="0.82746426900000003" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="85X-AT-lVX">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search an artist" id="85X-AT-lVX">
                             <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="NKR-fw-uOd" detailTextLabel="uGb-pu-PuH" imageView="sw0-Ov-xUY" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="36t-zr-XtT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="NKR-fw-uOd" imageView="sw0-Ov-xUY" rowHeight="100" style="IBUITableViewCellStyleDefault" id="36t-zr-XtT">
                                 <rect key="frame" x="0.0" y="99.333332061767578" width="390" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="36t-zr-XtT" id="F4K-DG-Xhk">
@@ -98,16 +116,9 @@ Spotizer</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NKR-fw-uOd">
-                                            <rect key="frame" x="135" y="30" width="33" height="20.333333333333332"/>
+                                            <rect key="frame" x="135" y="0.0" width="235" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uGb-pu-PuH">
-                                            <rect key="frame" x="135" y="53.333333333333329" width="43.666666666666664" height="14.333333333333334"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -119,6 +130,9 @@ Spotizer</string>
                                     <color key="backgroundColor" systemColor="systemRedColor"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
+                                <connections>
+                                    <segue destination="gui-2v-cGO" kind="show" id="Qas-lX-NaD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -127,10 +141,43 @@ Spotizer</string>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="211-I9-74q"/>
+                    <navigationItem key="navigationItem" id="ka7-oe-Qgz"/>
+                    <connections>
+                        <outlet property="searchBar" destination="85X-AT-lVX" id="8Cx-Fg-o4A"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9F-Uh-JV6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="847.76785714285711"/>
+        </scene>
+        <!--Album Table View Controller-->
+        <scene sceneID="Sqk-Gl-EvO">
+            <objects>
+                <tableViewController storyboardIdentifier="album" id="gui-2v-cGO" customClass="AlbumTableViewController" customModule="Spotizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vk3-0x-em4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="album" id="fQf-aA-nnc">
+                                <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fQf-aA-nnc" id="WU0-bJ-kIj">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gui-2v-cGO" id="K5Z-yH-Bxn"/>
+                            <outlet property="delegate" destination="gui-2v-cGO" id="P3X-Bo-y48"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="hoj-px-dPb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9s-pl-nDD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964.61538461538453" y="1588.8625592417061"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="Ysu-R6-z1U">
@@ -200,15 +247,47 @@ Spotizer</string>
             </objects>
             <point key="canvasLocation" x="944.61538461538453" y="846.6824644549763"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eRu-sD-uZj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WRT-Ha-nqI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J4i-ei-pZh">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EqU-6v-sUY" kind="relationship" relationship="rootViewController" id="VDw-Ad-LWe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Can-OM-Zrr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1185" y="847"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="VDw-Ad-LWe"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="da" width="225" height="225"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="pause" catalog="system" width="88" height="128"/>
         <image name="ram_daftPunk" width="355" height="353"/>
+        <image name="somethingAboutUs" width="225" height="225"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

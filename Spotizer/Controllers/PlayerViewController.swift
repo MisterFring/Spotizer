@@ -13,6 +13,7 @@ class PlayerViewController: UIViewController {
     public var songs:[Song] = []
     public var position:Int = 0
     public var song:Song?
+    public var artworkImage:UIImage?
     //var player:AVAudioPlayer?
    
     
@@ -24,10 +25,21 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurePlayer()
+        
+        // set radius on artworkImageView's corners
+        self.artworkImageView.layer.masksToBounds = true
+        self.artworkImageView.layer.cornerRadius = 30
+        
         //PlayerManager.shared.playMusic(url:songs[position]["audioFileName"]!)
 
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        // set radius on artworkImageView's corners
+        self.artworkImageView.layer.masksToBounds = true
+        self.artworkImageView.layer.cornerRadius = 30
+    }
+    
     @IBAction func playAndStopButton(_ sender: UIButton) {
         PlayerManager.shared.playStop(button:sender)
     }
@@ -44,8 +56,9 @@ class PlayerViewController: UIViewController {
         let song = songs[position]
         //let artworkImage = UIImage(named: song.blabablbal!)
         let title = song.title
+        
 
-        //artworkImageView.image = artworkImage
+        artworkImageView.image = self.artworkImage
         titleLabel.text = title
         PlayerManager.shared.playAudioFromURL(urlDeezer: song.url)
     }
