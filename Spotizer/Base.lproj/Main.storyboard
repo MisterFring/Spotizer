@@ -85,7 +85,7 @@ Spotizer</string>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="piz-aI-P8P"/>
-                        <segue destination="EqU-6v-sUY" kind="relationship" relationship="viewControllers" id="Or0-IP-Tih"/>
+                        <segue destination="WRT-Ha-nqI" kind="relationship" relationship="viewControllers" id="avO-4k-wyY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHm-We-WSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -130,9 +130,6 @@ Spotizer</string>
                                     <color key="backgroundColor" systemColor="systemRedColor"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
-                                <connections>
-                                    <segue destination="gui-2v-cGO" kind="show" id="Qas-lX-NaD"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -158,13 +155,28 @@ Spotizer</string>
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vIz-np-oxM">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="album" id="fQf-aA-nnc">
-                                <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="album" textLabel="Pgq-AK-kRv" style="IBUITableViewCellStyleDefault" id="fQf-aA-nnc">
+                                <rect key="frame" x="0.0" y="72" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fQf-aA-nnc" id="WU0-bJ-kIj">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pgq-AK-kRv">
+                                            <rect key="frame" x="20" y="0.0" width="350" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -174,10 +186,13 @@ Spotizer</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="hoj-px-dPb"/>
+                    <connections>
+                        <outlet property="artistLabel" destination="vIz-np-oxM" id="bpc-fO-LXH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9s-pl-nDD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964.61538461538453" y="1588.8625592417061"/>
+            <point key="canvasLocation" x="945" y="847"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="Ysu-R6-z1U">
@@ -245,12 +260,13 @@ Spotizer</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fV9-zI-cSz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.61538461538453" y="846.6824644549763"/>
+            <point key="canvasLocation" x="2229" y="847"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="eRu-sD-uZj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WRT-Ha-nqI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="tUf-jD-vPr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="J4i-ei-pZh">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -266,9 +282,6 @@ Spotizer</string>
             <point key="canvasLocation" x="-1185" y="847"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="VDw-Ad-LWe"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="da" width="225" height="225"/>
         <image name="globe" catalog="system" width="128" height="121"/>

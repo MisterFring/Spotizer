@@ -9,9 +9,22 @@ import UIKit
 
 class AlbumTableViewController: UITableViewController {
     public var artistId:Int = 0
+    public var artistName:String = "test nom artist"
+    
+    var albums:[Album] = [Album(id: 12, title: "I'm a title", pictureUrl: "test")]
+    
+    @IBOutlet weak var artistLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        artistLabel.text = artistName
+        ApiManager().fetchAlbumsFromArtistId(id:self.artistId) { (data, error) in
+            self.albums = data
+            print(data)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,18 +42,21 @@ class AlbumTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return self.albums.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "album", for: indexPath)
 
         // Configure the cell...
+        print(albums[indexPath.row].title)
+        cell.textLabel?.text = albums[indexPath.row].title
+        cell.imageView?.image = Utils().getImageFromUrl(urlStr: albums[indexPath.row].pictureUrl)
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -63,13 +63,14 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
     // When you clic on an artist
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)!
-        print("User cell :  \(cell)")
-        print("User touched on \(indexPath) row")
+        //let cell = tableView.cellForRow(at: indexPath)!
+        //print("User cell :  \(cell)")
+        //print("User touched on \(indexPath) row")
         if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "album") as? AlbumTableViewController{
             
                 // send artist id for deezer request to the album TVC
                 vc.artistId = artistsArray[indexPath.row].id
+                vc.artistName = artistsArray[indexPath.row].name
                 print(vc.artistId)
                 self.navigationController?.pushViewController(vc, animated: true)
             }

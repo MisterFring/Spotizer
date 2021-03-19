@@ -9,7 +9,7 @@ import Foundation
 
 class ApiManager {
     
-    var tracksIdArray = ["3135562","3135563","3135564", "3135565", "3135566", "440035032", "465176382", "466723862"]
+    var tracksIdArray = ["3135562","3135563","3135564", "3135565", "3135566", "440035032", "465176382", "466723862", "466804802", "444261522", "125699152", "419133822", "142986200", "139786807"]
     
 //    func fetchSongs() {
 //        let config = URLSessionConfiguration.default
@@ -105,7 +105,45 @@ class ApiManager {
         task.resume()
         //print(randomSong)
     }
+    
+    func fetchAlbumsFromArtistId(id: Int,completion: @escaping (_ data : [Album], _ error: Error?) -> Void) -> Void {
+        
+        var albumsArray = [Album]()
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        
+        let strUrl = "https://api.deezer.com/artist/\(id)/albums"
+        let url = URL(string: strUrl)!
+        
+        let task = session.dataTask(with: url) {
+            (data, response, error) in
+            if error != nil {
+                print(error?.localizedDescription ?? "error")
+            } else {
+                if let json = try? JSONSerialization.jsonObject(with: data!, options: []){
+                    if let data = json as? [String:AnyObject] {
+                        let trueData = data["data"] as? [[String:AnyObject]]
+                        //print(trueData)
+                        for item in trueData! {
+                            let id = item["id"] as? Int
+                            let title = item["title"] as? String
+                            let pictutreUrl = item["cover_medium"] as? String
+                            
+                            let myAlbum = Album(id: id!, title: title!, pictureUrl: pictutreUrl!)
+                            albumsArray.append(myAlbum)
+                        }
+                        completion(albumsArray, error)
+                        
+                    }
+                }
+            }
+        }
+        task.resume()
+    }
 }
+
+
 struct Song {
     var title:String
     var url:String
@@ -117,6 +155,15 @@ struct Artist {
     var name:String
     var pictureUrl:String
 }
+
+struct Album {
+    var id:Int
+    var title:String
+    var pictureUrl : String
+}
+
+
+
 extension String {
   private static let allowedCharacters = NSCharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-")
   
