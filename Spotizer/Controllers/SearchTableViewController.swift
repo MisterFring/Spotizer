@@ -39,6 +39,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Player", style: .plain, target: self, action: #selector(self.displayPlayer))
         searchBar.delegate = self
         
         
@@ -123,6 +124,11 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             }
         }
         
+    }
+    
+    @objc func displayPlayer(sender:AnyObject){
+        print("button player tapped")
+        self.callPlayerModal(song: Song(title: "test du bouton player", url: "https://cdns-preview-7.dzcdn.net/stream/c-7af918cb131b9d5b8f5c1e40e62da91b-8.mp3", urlImage: "https://cdns-images.dzcdn.net/images/cover/2e018122cb56986277102d2041a592c8/250x250-000000-80-0-0.jpg"))
     }
     
     

@@ -8,35 +8,13 @@
 import Foundation
 
 class ApiManager {
+    let urlPrefDeezerApi = "https://api.deezer.com/"
     
     var tracksIdArray = ["3135562","3135563","3135564", "3135565", "3135566", "440035032", "465176382", "466723862", "466804802", "444261522", "125699152", "419133822", "142986200", "139786807"]
     
-//    func fetchSongs() {
-//        let config = URLSessionConfiguration.default
-//        let session = URLSession(configuration: config)
-//
-//        let url = URL(string: "https://api.deezer.com/album/302127")!
-//
-//        let task = session.dataTask(with: url) {
-//            (data, response, error) in
-//            if error != nil {
-//                print(error?.localizedDescription ?? "error")
-//            } else {
-//                if let json = try? JSONSerialization.jsonObject(with: data!, options: []){
-//                   // print("\(json)")
-//                    if let data = json as? [String:AnyObject] {
-//                        if let dataArtist = data["artist"] as? [String:AnyObject]{
-//                            print(dataArtist)
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//        task.resume()
-//    }
     func fetchArtists(searchText:String ,completion: @escaping (_ data : [Artist], _ error: Error?) -> Void){
         var artistsArray = [Artist]()
-        let strUrl = "https://api.deezer.com/search/artist?q=" + searchText.slugify()
+        let strUrl = "\(self.urlPrefDeezerApi)search/artist?q=" + searchText.slugify()
         print(searchText.slugify())
         let url = URL(string: strUrl)!
         let config = URLSessionConfiguration.default
@@ -77,7 +55,7 @@ class ApiManager {
         let session = URLSession(configuration: config)
         var randomSong = Song(title: "test", url: "test", urlImage: "test")
         
-        let strUrl = "https://api.deezer.com/track/" + randomId
+        let strUrl = "\(self.urlPrefDeezerApi)track/" + randomId
         let url = URL(string: strUrl)!
         
         let task = session.dataTask(with: url) {
@@ -113,7 +91,7 @@ class ApiManager {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         
-        let strUrl = "https://api.deezer.com/artist/\(id)/albums"
+        let strUrl = "\(self.urlPrefDeezerApi)artist/\(id)/albums"
         let url = URL(string: strUrl)!
         
         let task = session.dataTask(with: url) {

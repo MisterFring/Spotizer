@@ -35,20 +35,19 @@ class ViewController: UIViewController {
             if let data = try? Data(contentsOf: url!) {
                 let image = UIImage(data: data)
                 DispatchQueue.main.async {
-                    self.titleLabel.text = self.rdmSong.title;                    self.artworkImageView.image = image
+                    self.titleLabel.text = self.rdmSong.title
+                    self.artworkImageView.image = image
                 }
             }
             
             
         }
-        
-        
-        //titleLabel.text = song.title
+    }
+    //titleLabel.text = song.title
 //        let url = URL(string: song.url)
 //        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
 //        artworkImageView.image = UIImage(data: data!)
-        // Do any additional setup after loading the view.
-    }
+    // Do any additional setup after loading the view.
 //    @IBAction func playButton(_ sender: Any) {
 //        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "player") as? PlayerViewController {
 //            
