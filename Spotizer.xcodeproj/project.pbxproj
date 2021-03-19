@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D6239CC62604A9B800005E6C /* TrackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6239CC52604A9B800005E6C /* TrackTableViewController.swift */; };
+		D6239CD32604C3B200005E6C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6239CD22604C3B200005E6C /* Extensions.swift */; };
 		D65791652600E75600CA869A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791642600E75600CA869A /* AppDelegate.swift */; };
 		D65791672600E75700CA869A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791662600E75700CA869A /* SceneDelegate.swift */; };
 		D65791692600E75700CA869A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791682600E75700CA869A /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		D6239CC52604A9B800005E6C /* TrackTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewController.swift; sourceTree = "<group>"; };
+		D6239CD22604C3B200005E6C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D65791612600E75600CA869A /* Spotizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65791642600E75600CA869A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D65791662600E75700CA869A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D6239CCD2604B8FB00005E6C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D657916A2600E75700CA869A /* Main.storyboard */,
+				D657916F2600E75800CA869A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D6239CD12604C39900005E6C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D6239CD22604C3B200005E6C /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D65791582600E75600CA869A = {
 			isa = PBXGroup;
 			children = (
@@ -125,14 +144,14 @@
 		D65791632600E75600CA869A /* Spotizer */ = {
 			isa = PBXGroup;
 			children = (
+				D6239CD12604C39900005E6C /* Extensions */,
+				D6239CCD2604B8FB00005E6C /* Storyboards */,
 				D65791E62603AF2200CA869A /* Controllers */,
 				D65791C72602028600CA869A /* Managers */,
 				D65791A526014A9B00CA869A /* Resources */,
 				D65791642600E75600CA869A /* AppDelegate.swift */,
 				D65791662600E75700CA869A /* SceneDelegate.swift */,
-				D657916A2600E75700CA869A /* Main.storyboard */,
 				D657916D2600E75800CA869A /* Assets.xcassets */,
-				D657916F2600E75800CA869A /* LaunchScreen.storyboard */,
 				D65791722600E75800CA869A /* Info.plist */,
 				D65791E12603A00600CA869A /* Utils.swift */,
 			);
@@ -348,6 +367,7 @@
 				D65791B6260158FA00CA869A /* PlayerViewController.swift in Sources */,
 				D6239CC62604A9B800005E6C /* TrackTableViewController.swift in Sources */,
 				D65791E82603AF7500CA869A /* AlbumTableViewController.swift in Sources */,
+				D6239CD32604C3B200005E6C /* Extensions.swift in Sources */,
 				D65791E22603A00600CA869A /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

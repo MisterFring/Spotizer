@@ -8,7 +8,7 @@
 import UIKit
 
 class SearchTableViewController: UITableViewController, UISearchBarDelegate {
-    var artistsArray:[Artist] = [Artist(id: 1234, name: "TESTSTSTSTST", pictureUrl: "String")]
+    var artistsArray:[Artist] = [Artist(id: 1234, name: "TEST", pictureUrl: "String")]
     @IBOutlet weak var searchBar: UISearchBar!
     let sounds = [
         [
@@ -125,10 +125,15 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         
     }
     
+    
 //    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 //        print("searchText \(searchBar.text)")
 //    }
 
+    
+    
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

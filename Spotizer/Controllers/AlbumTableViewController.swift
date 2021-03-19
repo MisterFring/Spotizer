@@ -66,6 +66,7 @@ class AlbumTableViewController: UITableViewController {
             
                 vc.albumId = self.albums[indexPath.row].id
                 vc.artistName = self.artistName
+                vc.albumName = self.albums[indexPath.row].title
                 self.navigationController?.pushViewController(vc, animated: true)
             }
     }

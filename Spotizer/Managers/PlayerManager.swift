@@ -72,9 +72,3 @@ final class PlayerManager {
         //audioPlayer?.play()
     }
 }
-
-extension AVPlayer {
-    var isPlaying: Bool {
-        return rate != 0 && error == nil
-    }
-}

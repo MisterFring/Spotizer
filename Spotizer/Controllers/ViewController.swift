@@ -78,16 +78,7 @@ class ViewController: UIViewController {
     
     @objc func imageTapped(_ recognizer: UITapGestureRecognizer) {
         print("image tapped")
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "player") as? PlayerViewController {
-                
-                let imageTest = Utils().getImageFromUrl(urlStr: rdmSong.urlImage)
-                let songsArray = [self.rdmSong]
-                vc.songs = songsArray
-                vc.position = 0
-                vc.artworkImage = imageTest
-                self.present(vc, animated: true, completion: nil)
-    
-            }
+        self.callPlayerModal(song: self.rdmSong)
     }
 
 }

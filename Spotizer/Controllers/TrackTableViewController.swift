@@ -9,11 +9,14 @@ import UIKit
 
 class TrackTableViewController: UITableViewController {
     public var artistName = "Artist name test"
+    public var albumName = "Album name test"
     public var albumId = 27
     var tracksArray:[Song] = [Song(title: "test", url: "test", urlImage: "test")]
 
+    @IBOutlet weak var artistAlbumLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.artistAlbumLabel.text = "\(artistName) - \(albumName)"
         ApiManager().fetchTracksFromAlbumId(id:self.albumId) { (data, error) in
             self.tracksArray = data
             DispatchQueue.main.async {
@@ -49,16 +52,17 @@ class TrackTableViewController: UITableViewController {
     
     // When you clic on an album
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "player") as? PlayerViewController {
-                
-                let imageTest = Utils().getImageFromUrl(urlStr: self.tracksArray[indexPath.row].urlImage)
-                let songsArray = self.tracksArray
-                vc.songs = songsArray
-            vc.position = indexPath.row
-                vc.artworkImage = imageTest
-                self.present(vc, animated: true, completion: nil)
-    
-            }
+        self.callPlayerModal(song: self.tracksArray[indexPath.row])
+//        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "player") as? PlayerViewController {
+//
+//                let imageTest = Utils().getImageFromUrl(urlStr: self.tracksArray[indexPath.row].urlImage)
+//                let songsArray = self.tracksArray
+//                vc.songs = songsArray
+//            vc.position = indexPath.row
+//                vc.artworkImage = imageTest
+//                self.present(vc, animated: true, completion: nil)
+//
+//            }
     }
 
     /*
@@ -107,3 +111,5 @@ class TrackTableViewController: UITableViewController {
     */
 
 }
+
+
