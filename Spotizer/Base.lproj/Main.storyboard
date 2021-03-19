@@ -194,6 +194,34 @@ Spotizer</string>
             </objects>
             <point key="canvasLocation" x="945" y="847"/>
         </scene>
+        <!--Track Table View Controller-->
+        <scene sceneID="mVu-Iy-rNC">
+            <objects>
+                <tableViewController storyboardIdentifier="tracks" id="u8F-oq-leQ" customClass="TrackTableViewController" customModule="Spotizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="C4g-Mj-ECb">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="track" id="1xq-OP-MbM">
+                                <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1xq-OP-MbM" id="24P-Ls-sCz">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u8F-oq-leQ" id="NqZ-DX-5gn"/>
+                            <outlet property="delegate" destination="u8F-oq-leQ" id="W7S-ax-m5m"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HF2-CX-x7I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2152" y="858"/>
+        </scene>
         <!--Player View Controller-->
         <scene sceneID="Ysu-R6-z1U">
             <objects>
@@ -260,7 +288,7 @@ Spotizer</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fV9-zI-cSz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2229" y="847"/>
+            <point key="canvasLocation" x="2255" y="93"/>
         </scene>
         <!--Item-->
         <scene sceneID="eRu-sD-uZj">

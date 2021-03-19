@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6239CC62604A9B800005E6C /* TrackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6239CC52604A9B800005E6C /* TrackTableViewController.swift */; };
 		D65791652600E75600CA869A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791642600E75600CA869A /* AppDelegate.swift */; };
 		D65791672600E75700CA869A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791662600E75700CA869A /* SceneDelegate.swift */; };
 		D65791692600E75700CA869A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65791682600E75700CA869A /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D6239CC52604A9B800005E6C /* TrackTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewController.swift; sourceTree = "<group>"; };
 		D65791612600E75600CA869A /* Spotizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65791642600E75600CA869A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D65791662600E75700CA869A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				D6579197260105C500CA869A /* SearchTableViewController.swift */,
 				D65791B5260158FA00CA869A /* PlayerViewController.swift */,
 				D65791E72603AF7500CA869A /* AlbumTableViewController.swift */,
+				D6239CC52604A9B800005E6C /* TrackTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				D65791672600E75700CA869A /* SceneDelegate.swift in Sources */,
 				D6579198260105C500CA869A /* SearchTableViewController.swift in Sources */,
 				D65791B6260158FA00CA869A /* PlayerViewController.swift in Sources */,
+				D6239CC62604A9B800005E6C /* TrackTableViewController.swift in Sources */,
 				D65791E82603AF7500CA869A /* AlbumTableViewController.swift in Sources */,
 				D65791E22603A00600CA869A /* Utils.swift in Sources */,
 			);

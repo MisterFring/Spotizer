@@ -1,31 +1,25 @@
 //
-//  AlbumTableViewController.swift
+//  TrackTableViewController.swift
 //  Spotizer
 //
-//  Created by Pierre Decrock on 18/03/2021.
+//  Created by Pierre Decrock on 19/03/2021.
 //
 
 import UIKit
 
-class AlbumTableViewController: UITableViewController {
-    public var artistId:Int = 0
-    public var artistName:String = "test nom artist"
-    
-    var albums:[Album] = [Album(id: 12, title: "I'm a title", pictureUrl: "test")]
-    
-    @IBOutlet weak var artistLabel: UILabel!
-    
+class TrackTableViewController: UITableViewController {
+    public var artistName = "Artist name test"
+    public var albumId = 27
+    var tracksArray:[Song] = [Song(title: "test", url: "test", urlImage: "test")]
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        artistLabel.text = artistName
-        ApiManager().fetchAlbumsFromArtistId(id:self.artistId) { (data, error) in
-            self.albums = data
-            print(data)
+        ApiManager().fetchTracksFromAlbumId(id:self.albumId) { (data, error) in
+            self.tracksArray = data
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -42,34 +36,30 @@ class AlbumTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.albums.count
+        return self.tracksArray.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "album", for: indexPath)
-
-        // Configure the cell...
-        print(albums[indexPath.row].title)
-        cell.textLabel?.text = albums[indexPath.row].title
-        cell.imageView?.image = Utils().getImageFromUrl(urlStr: albums[indexPath.row].pictureUrl)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "track", for: indexPath)
+        cell.imageView?.image = Utils().getImageFromUrl(urlStr: self.tracksArray[indexPath.row].urlImage)
+        cell.textLabel?.text = self.tracksArray[indexPath.row].title
 
         return cell
     }
     
     // When you clic on an album
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let cell = tableView.cellForRow(at: indexPath)!
-        //print("User cell :  \(cell)")
-        //print("User touched on \(indexPath) row")
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "tracks") as? TrackTableViewController{
-            
-                vc.albumId = self.albums[indexPath.row].id
-                vc.artistName = self.artistName
-                self.navigationController?.pushViewController(vc, animated: true)
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "player") as? PlayerViewController {
+                
+                let imageTest = Utils().getImageFromUrl(urlStr: self.tracksArray[indexPath.row].urlImage)
+                let songsArray = self.tracksArray
+                vc.songs = songsArray
+            vc.position = indexPath.row
+                vc.artworkImage = imageTest
+                self.present(vc, animated: true, completion: nil)
+    
             }
     }
-    
 
     /*
     // Override to support conditional editing of the table view.
